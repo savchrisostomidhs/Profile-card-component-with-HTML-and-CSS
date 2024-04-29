@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Profile card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+    :root {
+      --Dark-cyan: hsl(185, 75%, 39%);
+      --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+      --Dark-grayish-blue: hsl(227, 10%, 46%);
+      --Dark-gray: hsl(0, 0%, 59%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Kumbh Sans";
+      font-size: 18px;
+      display: grid;
+      place-items: center;
+      height: 100vh;
+      background-color: var(--Dark-cyan);
+      background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+      background-position: -350px -600px, 600px 300px;
+      background-repeat: no-repeat, no-repeat;
+    }
+
+    main {
+      height: 60%;
+      width: 30%;
+      background-color: white;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    main .back {
+      height: 40%;
+      width: 100%;
+      background-image: url(./images/bg-pattern-card.svg);
+      border-radius: 10px 10px 0 0;
+    }
+
+    main img {
+      display: block;
+      border-radius: 50%;
+      border: 5px solid white;
+      position: relative;
+      top: -48px;
+      left: calc(50% - 48px);
+    }
+
+    .victor {
+      margin-top: -40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .victor h2 {
+      font-size: 18px;
+      margin-right: 5px;
+    }
+
+    .victor p {
+      color: var(--Dark-grayish-blue);
+      font-weight: 400;
+    }
+
+    main > p{
+      color: var(--Dark-grayish-blue);
+      font-weight: 400;
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-end;
+      margin-top: 6%;
+      padding: 20px;
+      border-top: 1px solid hsla(0, 0%, 59%, 0.4);
+    }
+
+    .bold {
+      font-weight: 700;
+    }
+
+    .stats div p:nth-child(2) {
+      font-size: 14px;
+      color: var(--Dark-grayish-blue);
+    }
+
+    @media (max-width: 950px) {
+      main {
+        width: 50%;
+      }
+    }
+    @media (max-width: 480px) {
+      main {
+        width: 90%;
+      }
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      display: none;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="back"></div>
+    <img src="./images/image-victor.jpg" alt="victos">
+    <div class="victor">
+      <h2>Victor Crest</h2>
+      <p>26</p>
+    </div>
+    <p>London</p>
+
+    <div class="stats">
+      <div class="followers">
+        <p class="bold">80K</p>
+        <p>Followers</p>
+      </div>
+
+      <div class="likes">
+        <p class="bold">803K</p>
+        <p>Likes</p>
+      </div>
+
+      <div class="photos">
+        <p class="bold">1.4K</p>
+        <p>Photos</p>
+      </div>
+    </div>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+
+</html>
